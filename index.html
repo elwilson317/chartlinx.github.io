@@ -23,6 +23,28 @@
       padding: 20px;
     }
 
+    /* LOGO */
+    .logo {
+      width: 140px;
+      margin-bottom: 25px;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.9;
+      }
+      50% {
+        transform: scale(1.05);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 0.9;
+      }
+    }
+
     h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
@@ -57,7 +79,12 @@
 </head>
 <body>
   <div class="container">
+
+    <!-- LOGO -->
+    <img src="logo.png" alt="ChartLinx Logo" class="logo" />
+
     <h1>🚧 Work in Progress</h1>
+
     <p>
       ChartLinx is currently under development.<br />
       We’re building something exciting — stay tuned.
@@ -65,8 +92,8 @@
 
     <div class="contact">
       <p>
-        📧 <a href="mailto:fix@chartlinx.com">fix@chartlinx.com</a><br />
-        📞 +971562017773
+        📧 <a href="mailto:contact@chartlinx.com">contact@chartlinx.com</a><br />
+        📞 +91-XXXXXXXXXX
       </p>
     </div>
 
@@ -76,4 +103,3 @@
   </div>
 </body>
 </html>
-
