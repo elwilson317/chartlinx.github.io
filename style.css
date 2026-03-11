@@ -1,1 +1,18 @@
+body
+{
+margin:0;
+padding:0;
+background:#ffffff;
+font-family:Arial;
+}
 
+.page
+{
+width:100%;
+display:block;
+}
+
+section
+{
+width:100%;
+}
