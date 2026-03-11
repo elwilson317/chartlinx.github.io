@@ -15,14 +15,37 @@ font-family:Arial;
 nav{
 background:#f2f2f2;
 padding:15px;
-text-align:right;
+display:flex;
+justify-content:flex-end;
+gap:25px;
 }
 
 nav a{
-margin-left:25px;
 cursor:pointer;
 text-decoration:none;
 color:#333;
+font-weight:500;
+}
+
+.dropdown{
+position:relative;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.2);
+padding:10px;
+}
+
+.dropdown-content a{
+display:block;
+padding:6px 12px;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
 }
 
 .viewer{
@@ -42,12 +65,35 @@ height:100%;
 <body>
 
 <nav>
+
 <a onclick="loadPage('Home.svg')">Home</a>
+
 <a onclick="loadPage('AboutUs.svg')">About Us</a>
-<a onclick="loadPage('OurServices.svg')">Our Services</a>
+
+<div class="dropdown">
+
+<a>Our Services ▾</a>
+
+<div class="dropdown-content">
+
+<a onclick="loadPage('ShipBroking.svg')">Ship Broking</a>
+
+<a onclick="loadPage('OpsSupport.svg')">Ops Support</a>
+
+<a onclick="loadPage('HeavyLift.svg')">Heavy Lift</a>
+
+<a onclick="loadPage('9.svg')">Service 4</a>
+
+</div>
+
+</div>
+
 <a onclick="loadPage('Network.svg')">Network</a>
+
 <a onclick="loadPage('Partner.svg')">Partner</a>
+
 <a onclick="loadPage('ContactUs.svg')">Contact Us</a>
+
 </nav>
 
 <div class="viewer">
@@ -59,7 +105,9 @@ height:100%;
 <script>
 
 function loadPage(page){
+
 document.getElementById("viewer").data = "svg/" + page;
+
 }
 
 </script>
