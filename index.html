@@ -29,6 +29,7 @@ font-weight:500;
 
 .dropdown{
 position:relative;
+display:inline-block;
 }
 
 .dropdown-content{
@@ -36,27 +37,22 @@ display:none;
 position:absolute;
 background:white;
 box-shadow:0 4px 10px rgba(0,0,0,0.2);
-padding:8px 0;
 min-width:180px;
-left:0;
 top:100%;
+left:0;
 }
 
 .dropdown:hover .dropdown-content{
 display:block;
 }
 
-.dropdown.active .dropdown-content{
-display:block;
-}
-
 .dropdown-content a{
 display:block;
 padding:8px 16px;
-cursor:pointer;
 text-decoration:none;
 color:#333;
 white-space:nowrap;
+cursor:pointer;
 }
 
 .dropdown-content a:hover{
@@ -91,29 +87,13 @@ height:100%;
 
 <div class="dropdown-content">
 
-<a 
-onmouseover="previewPage('ShipBroking.svg')" 
-onclick="loadPage('ShipBroking.svg')">
-Ship Broking
-</a>
+<a onclick="loadPage('ShipBroking.svg')">Ship Broking</a>
 
-<a 
-onmouseover="previewPage('OpsSupport.svg')" 
-onclick="loadPage('OpsSupport.svg')">
-Ops Support
-</a>
+<a onclick="loadPage('OpsSupport.svg')">Ops Support</a>
 
-<a 
-onmouseover="previewPage('HeavyLift.svg')" 
-onclick="loadPage('Heavyliftupd.svg')">
-Heavy Lift
-</a>
+<a onclick="loadPage('HeavyLift.svg')">Heavy Lift</a>
 
-<a 
-onmouseover="previewPage('9.svg')" 
-onclick="loadPage('9.svg')">
-E2E Chartering Support
-</a>
+<a onclick="loadPage('9.svg')">Service 4</a>
 
 </div>
 
@@ -139,24 +119,13 @@ E2E Chartering Support
 
 <script>
 
+<script>
+
 function loadPage(page){
 document.getElementById("viewer").data = "svg/" + page;
 }
 
-function previewPage(page){
-document.getElementById("viewer").data = "svg/" + page;
-}
-
-document.querySelector(".dropdown > a").addEventListener("click", function(e){
-e.preventDefault();
-document.querySelector(".dropdown").classList.toggle("active");
-});
-
-document.addEventListener("click", function(e){
-if(!e.target.closest(".dropdown")){
-document.querySelector(".dropdown").classList.remove("active");
-}
-});
+</script>
 
 </script>
 
