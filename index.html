@@ -35,17 +35,24 @@ position:relative;
 display:none;
 position:absolute;
 background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.2);
 padding:10px;
-}
-
-.dropdown-content a{
-display:block;
-padding:6px 12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+white-space:nowrap;
 }
 
 .dropdown:hover .dropdown-content{
-display:block;
+display:flex;
+gap:15px;
+}
+
+.dropdown-content a{
+padding:8px 14px;
+cursor:pointer;
+}
+
+.dropdown-content a:hover{
+background:#f2f2f2;
+border-radius:5px;
 }
 
 .viewer{
@@ -76,13 +83,29 @@ height:100%;
 
 <div class="dropdown-content">
 
-<a onclick="loadPage('ShipBroking.svg')">Ship Broking</a>
+<a 
+onmouseover="previewPage('ShipBroking.svg')" 
+onclick="loadPage('ShipBroking.svg')">
+Ship Broking
+</a>
 
-<a onclick="loadPage('OpsSupport.svg')">OPS Support</a>
+<a 
+onmouseover="previewPage('OpsSupport.svg')" 
+onclick="loadPage('OpsSupport.svg')">
+Ops Support
+</a>
 
-<a onclick="loadPage('HeavyLift.svg')">Heavy Lift</a>
+<a 
+onmouseover="previewPage('HeavyLift.svg')" 
+onclick="loadPage('HeavyLift.svg')">
+Heavy Lift
+</a>
 
-<a onclick="loadPage('9.svg')">E2E Chartering Support</a>
+<a 
+onmouseover="previewPage('9.svg')" 
+onclick="loadPage('9.svg')">
+Service 4
+</a>
 
 </div>
 
@@ -107,9 +130,11 @@ height:100%;
 <script>
 
 function loadPage(page){
-
 document.getElementById("viewer").data = "svg/" + page;
+}
 
+function previewPage(page){
+document.getElementById("viewer").data = "svg/" + page;
 }
 
 </script>
