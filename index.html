@@ -35,24 +35,30 @@ position:relative;
 display:none;
 position:absolute;
 background:white;
-padding:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.2);
-white-space:nowrap;
+padding:8px 0;
+min-width:180px;
 }
 
 .dropdown:hover .dropdown-content{
-display:flex;
-gap:15px;
+display:block;
 }
 
 .dropdown-content a{
-padding:8px 14px;
+display:block;
+padding:8px 16px;
 cursor:pointer;
+text-decoration:none;
+color:#333;
+white-space:nowrap;
 }
 
 .dropdown-content a:hover{
 background:#f2f2f2;
-border-radius:5px;
+}
+.dropdown-content{
+left:0;
+top:100%;
 }
 
 .viewer{
@@ -104,7 +110,7 @@ Heavy Lift
 <a 
 onmouseover="previewPage('9.svg')" 
 onclick="loadPage('9.svg')">
-Service 4
+E2E Chartering Support
 </a>
 
 </div>
